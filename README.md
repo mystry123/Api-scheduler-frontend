@@ -48,25 +48,6 @@ npm run build
 npm start
 ```
 
-## Project Structure
-
-```
-app/
-├── components/
-│   ├── ui/           # shadcn/ui components
-│   └── layout.tsx    # Main layout with sidebar
-├── lib/
-│   ├── api.ts        # API client
-│   └── utils.ts      # Utility functions
-├── routes/
-│   ├── _index.tsx    # Dashboard
-│   ├── targets.tsx   # Targets page
-│   ├── schedules.tsx # Schedules page
-│   └── runs.tsx      # Runs page
-├── styles/
-│   └── globals.css   # Global styles and theme
-└── root.tsx          # Root layout
-```
 
 ## Configuration
 
