@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Elegant neutral palette - warm grays */
+    --background: 0 0% 99%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Subtle slate blue primary */
+    --primary: 220 14% 40%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 14% 30%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 220 14% 94%;
+    --accent-foreground: 220 14% 30%;
+
+    /* Soft destructive red */
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Soft success green */
+    --success: 142 50% 40%;
+    --success-foreground: 0 0% 98%;
+
+    /* Soft warning amber */
+    --warning: 38 90% 50%;
+    --warning-foreground: 0 0% 10%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 14% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 20% 10%;
+    --foreground: 210 20% 95%;
+
+    --card: 224 20% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 224 20% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 217 30% 60%;
+    --primary-foreground: 224 20% 10%;
+
+    --secondary: 224 20% 18%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 224 20% 18%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 224 20% 18%;
+    --accent-foreground: 210 20% 90%;
+
+    --destructive: 0 60% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142 45% 45%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 38 85% 55%;
+    --warning-foreground: 0 0% 10%;
+
+    --border: 224 20% 20%;
+    --input: 224 20% 20%;
+    --ring: 217 30% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Elegant scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: fade-in 0.3s ease-out, slide-in 0.3s ease-out;
+  }
+}
+
+/* Status indicator colors - subtle and elegant */
+.status-active {
+  @apply text-emerald-600 dark:text-emerald-400;
+}
+
+.status-paused {
+  @apply text-amber-600 dark:text-amber-400;
+}
+
+.status-expired {
+  @apply text-slate-500 dark:text-slate-400;
+}
+
+.status-success {
+  @apply text-emerald-600 dark:text-emerald-400;
+}
+
+.status-failed {
+  @apply text-rose-600 dark:text-rose-400;
+}
+
+.status-running {
+  @apply text-sky-600 dark:text-sky-400;
+}
+
+.status-pending {
+  @apply text-slate-500 dark:text-slate-400;
+}
